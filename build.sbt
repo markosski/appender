@@ -8,5 +8,9 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "appender",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies += scalaTest % Test,
+    libraryDependencies += depConfig,
+    libraryDependencies += depS3,
+    libraryDependencies ++= depLogging,
+    libraryDependencies += avro
   )
